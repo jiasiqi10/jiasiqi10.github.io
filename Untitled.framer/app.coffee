@@ -1,5 +1,5 @@
 # Import file "Sample File" (sizes and positions are scaled 1:2)
-figma = Framer.Importer.load("imported/Sample File@2x")
+#figma = Framer.Importer.load("imported/Sample File@2x")
 # To start, simply add and style the ScrollComponent.
 # In this example, we first add a nav bar layer.
 # Then we create 10 layers and add them to the content layer, which is naturally scrollable.
