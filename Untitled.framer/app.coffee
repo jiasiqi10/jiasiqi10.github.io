@@ -77,9 +77,9 @@ close.onClick (event, close) ->
 			curve: Bezier.easeInOut	
 
 close = new Layer
-	width: 45
 	parent: scroll
-	opacity: 0
+	width: 45
+	opacity: 1
 	x: 690
 	y: 146
 	height: 39
