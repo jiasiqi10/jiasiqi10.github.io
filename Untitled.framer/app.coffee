@@ -64,11 +64,11 @@ scroll.content.on Events.DragEnd, ->
 
 close = new Layer
 	parent: scroll
-	width: 45
+	width: 67
 	opacity: 0
-	height: 39
-	x: 689
-	y: 147
+	height: 69
+	x: 683
+	y: 132
 
 close.onClick (event, close) ->
 	tip.animate
