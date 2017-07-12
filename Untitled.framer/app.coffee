@@ -47,6 +47,7 @@ bottom = new Layer
 
 tip = new Layer
 	image: "images/tip.png"
+	parent: scroll
 	y: 131
 	width: 750
 	height: 70
@@ -77,6 +78,7 @@ close.onClick (event, close) ->
 
 close = new Layer
 	width: 45
+	parent: scroll
 	opacity: 0
 	x: 690
 	y: 146
