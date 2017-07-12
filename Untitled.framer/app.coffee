@@ -66,9 +66,8 @@ close = new Layer
 	parent: tip
 	width: 45
 	opacity: 0
-	x: 690
-	y: 146
 	height: 39
+	x: 689
 
 close.onClick (event, close) ->
 	tip.animate
