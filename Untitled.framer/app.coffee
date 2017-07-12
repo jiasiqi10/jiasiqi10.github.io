@@ -63,6 +63,7 @@ scroll.content.on Events.DragEnd, ->
 
 
 close = new Layer
+	parent: tip
 	width: 45
 	opacity: 0
 	x: 690
