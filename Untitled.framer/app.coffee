@@ -76,13 +76,7 @@ close.onClick (event, close) ->
 			time:0.2
 			curve: Bezier.easeInOut	
 
-close = new Layer
-	parent: tip
-	width: 45
-	opacity: 1
-	x: 690
-	y: 15
-	height: 39
+
 	
 	
 
