@@ -17,14 +17,8 @@ scroll = new ScrollComponent
 
 # Add top and bottom inset
 scroll.contentInset =
-	top: 128
+	top: -10
 
-navBar = new Layer
-	image: "images/top.png"
-	parent: scroll
-	backgroundColor: "#50F"
-	width: scroll.width 
-	height: 132
 
 # Add layers
 for i in [1]
@@ -33,9 +27,19 @@ for i in [1]
 		parent: scroll.content
 		name: "row #{i}"
 		width: 750
-		height: 1721
-		y: 0* i
+		height: 1791
+		y: 70* i
 		backgroundColor: "#FFF"
+
+tip2 = new Layer
+	parent: scroll.content
+	image: "images/tip2.png"
+	width: 750	
+	height: 70
+	y: Align.top(70)
+	
+	
+
 
 bottom = new Layer
 	image: "images/bottum.png"
@@ -48,36 +52,27 @@ bottom = new Layer
 tip = new Layer
 	image: "images/tip.png"
 	parent: scroll
-	y: 131
 	width: 750
 	height: 70
 	opacity: 0
+	y: 58
+
+navBar = new Layer
+	image: "images/top.png"
+	parent: scroll
+	backgroundColor: "#50F"
+	width: scroll.width 
+	height: 132
 
 scroll.content.on Events.DragEnd, ->
-	if scroll.content.y > 200
+	if scroll.content.y > 300
 		tip.animate
 			opacity: 1.00
+			y: 132
 			options:
-				time: 1
+				time: 0.5
+				delay:0.3
 				curve: Bezier.easeInOut
 
-
-close = new Layer
-	parent: scroll
-	width: 67
-	opacity: 0
-	height: 69
-	x: 683
-	y: 132
-
-close.onClick (event, close) ->
-	tip.animate
-		opacity:0
-		options: 
-			time:0.2
-			curve: Bezier.easeInOut	
-
-
-	
 	
 
