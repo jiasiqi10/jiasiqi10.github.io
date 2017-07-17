@@ -18,28 +18,34 @@ scroll = new ScrollComponent
 # Add top and bottom inset
 scroll.contentInset =
 	top: -10
+	
 
 
 # Add layers
-for i in [1]
-	layer = new Layer
-		image: "images/mid.png"
-		parent: scroll.content
-		name: "row #{i}"
-		width: 750
-		height: 1791
-		y: 70* i
-		backgroundColor: "#FFF"
+layer = new Layer
+	image: "images/mid.png"
+	parent: scroll.content
+	width: 750
+	height: 1791
+	y: 70
+	backgroundColor: "#FFF"
 
 tip2 = new Layer
 	parent: scroll.content
 	image: "images/tip2.png"
 	width: 750	
 	height: 70
-	y: Align.top(70)
-	
-	
+	y: 70
 
+
+close = new Layer
+	parent:tip2
+	width: 60
+	height: 60
+	x: 681
+	y: 5
+	opacity: 0
+	
 
 bottom = new Layer
 	image: "images/bottum.png"
@@ -57,6 +63,7 @@ tip = new Layer
 	opacity: 0
 	y: 58
 
+
 navBar = new Layer
 	image: "images/top.png"
 	parent: scroll
@@ -64,15 +71,58 @@ navBar = new Layer
 	width: scroll.width 
 	height: 132
 
+a1 = new Animation tip,
+	opacity: 1.00
+	y: 132
+	options:
+		time: 1
+		delay:0.3
+		curve: Bezier.easeInOut
+
+a2 = a1.reverse()
+
+a3 = new Animation layer,
+	y:70
+	options:
+		time:0.5
+a4 = new Animation tip2,
+	y:70
+	options:
+		time:0.5
+a5 = new Animation tip2,
+	y:140
+	options:
+		time:0.2
+
+a6 = new Animation layer,
+	y:140
+	options:
+		time:0.2
+	
+
+
 scroll.content.on Events.DragEnd, ->
-	if scroll.content.y > 300
-		tip.animate
-			opacity: 1.00
-			y: 132
-			options:
-				time: 0.5
-				delay:0.3
-				curve: Bezier.easeInOut
+	if scroll.content.y > 70
+		a5.start()
+		a6.start()
+
+scroll.content.on Events.DragEnd, ->
+	if scroll.content.y > 150
+		a1.start()
+		Utils.delay 2, ->
+			a2.start()
+			
+close.onClick (event, layer) ->
+	a3.start()
+	a4.start()
+			
+			
+
+
+
+			
+
+
 
 	
 
