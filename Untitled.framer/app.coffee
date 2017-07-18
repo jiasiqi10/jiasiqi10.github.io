@@ -89,24 +89,26 @@ a4 = new Animation tip2,
 	y:70
 	options:
 		time:0.5
+
 a5 = new Animation tip2,
 	y:140
 	options:
-		time:0.2
+		curve: Spring(damping: 1)
+		time: 1
 
 a6 = new Animation layer,
 	y:140
 	options:
-		time:0.2
+		curve: Spring(damping: 1)
+		time: 1
 	
-
-
+	
 scroll.content.on Events.DragEnd, ->
-	if scroll.content.y > 70
+	if scroll.content.y > 65
 		a5.start()
 		a6.start()
 
-scroll.content.on Events.DragEnd, ->
+	
 	if scroll.content.y > 150
 		a1.start()
 		Utils.delay 2, ->
