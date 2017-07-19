@@ -46,12 +46,12 @@ layerA = new Layer
 	x: 17
 photo = new Layer
 	superLayer: mainScreen
-	height: 196
+	height: 284
 	image: "images/photo.png"
-	width: 176
+	width: 248
 	opacity: 0
-	x: 286
-	y: 1060
+	x: 251
+	y: 980
 
 
 add = new Layer
@@ -75,7 +75,7 @@ a2 = a1.reverse()
 
 		
 a5=new Animation photo,
-	y:1045
+	y:965
 	opacity: 1
 	options:
 		curve:Bezier.easeInOut
@@ -83,6 +83,8 @@ a5=new Animation photo,
 a6 = a5.reverse()
 
 layerA.onClick (event, layer) ->
+
+
 	Utils.delay 1,->
 		a1.start()
 		a5.start()
