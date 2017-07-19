@@ -68,8 +68,8 @@ bg.perspective=300
 a1 = new Animation add,
 	rotationY: 180
 	options: 
-		time:0.6
-		curve: Spring(mass: 0.5)
+		time:0.5
+		curve: Spring(mass:1)
 
 a2 = a1.reverse()
 
