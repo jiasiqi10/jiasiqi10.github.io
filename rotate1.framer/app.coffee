@@ -28,12 +28,12 @@ camera = new Layer
 
 
 photo = new Layer
-	height: 202
+	height: 196
 	image: "images/photo.png"
-	width: 178
+	width: 176
 	opacity: 0
 	x: 286
-	y: 1050
+	y: 1060
 
 
 add = new Layer
@@ -51,16 +51,17 @@ a1 = new Animation add,
 	rotationY: 90
 	options: 
 		time:0.15
+		
 a2=a1.reverse()
 
 a3 = new Animation camera,
 	rotationY: 0
 	options: 
 		time:0.15
-
+		curve: Spring(damping: 0.3)
 a4 = a3.reverse()
 a5=new Animation photo,
-	y:1035
+	y:1045
 	opacity: 1
 	options:
 		curve:Bezier.easeInOut
