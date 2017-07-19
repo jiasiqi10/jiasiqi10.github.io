@@ -38,6 +38,12 @@ bg= new Layer
 
 
 
+layerA = new Layer
+	width: 95
+	height: 95
+	opacity: 0
+	y: 418
+	x: 17
 photo = new Layer
 	superLayer: mainScreen
 	height: 196
@@ -75,19 +81,20 @@ a5=new Animation photo,
 		curve:Bezier.easeInOut
 		time:0.5
 a6 = a5.reverse()
- 
-Utils.delay 1,->
-	a1.start()
-	a5.start()
-	add.on "change:rotationY", ->
-		if add.rotationY >= 90
-			add.image = "images/camera.png"
-	Utils.delay 3,->
-				a6.start()
-				a2.start()
-				add.on "change:rotationY", ->
-					if add.rotationY <= 90
-						add.image = "images/add.png"
+
+layerA.onClick (event, layer) ->
+	Utils.delay 1,->
+		a1.start()
+		a5.start()
+		add.on "change:rotationY", ->
+			if add.rotationY >= 90
+				add.image = "images/camera.png"
+		Utils.delay 5,->
+					a6.start()
+					a2.start()
+					add.on "change:rotationY", ->
+						if add.rotationY <= 90
+							add.image = "images/add.png"
 		
 
 
