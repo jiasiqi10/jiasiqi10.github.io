@@ -1,7 +1,7 @@
 
-lead = new VideoLayer
-	width: 750
-	height: 1334
-	video: "images/lead.mov"
+lead2 = new VideoLayer
+	width: 404
+	height: 720
+	video: "images/lead2.mov"
 
-lead.player.play()
+lead2.player.play()
