@@ -69,7 +69,7 @@ a1 = new Animation add,
 	rotationY: 180
 	options: 
 		time:0.5
-		curve: Spring(mass:1)
+		curve: Spring(mass:0.9)
 
 a2 = a1.reverse()
 
@@ -91,7 +91,7 @@ layerA.onClick (event, layer) ->
 		add.on "change:rotationY", ->
 			if add.rotationY >= 90
 				add.image = "images/camera.png"
-		Utils.delay 5,->
+	Utils.delay 5,->
 					a6.start()
 					a2.start()
 					add.on "change:rotationY", ->
