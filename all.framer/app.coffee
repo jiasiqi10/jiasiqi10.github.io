@@ -316,8 +316,8 @@ ralbum_text=aalbum_text.reverse()
 rclose = aclose.reverse()
 rtip = atip.reverse()
 
-layerA.onClick (event, layerA) ->
-	Utils.delay 1,->
+
+Utils.delay 1,->
 		a1.start()
 		a5.start()
 		add.on "change:rotationY", ->
