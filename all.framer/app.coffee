@@ -296,7 +296,6 @@ atip = new Animation tip,
 	opacity:1
 	options:
 		time:0.2
-		curve:Bezier.easeInOut
 
 aclose = new Animation close,
 	rotationZ:90
@@ -345,10 +344,18 @@ jump=()->
 						Utils.delay 0.2,->
 							a6album.start()
 
+add.on Events.Click,->
+	atip.start()
+	aclose.start()
+	all()
+	jump()
+	Utils.delay 2,->
+		jump()	
+		Utils.delay 2,->
+
+
 
 close.on Events.Click,->
-	rclose.start()
-	rtip.start()
 	rcomment.start()
 	Utils.delay 0.03,->
 		rsign.start()
@@ -361,27 +368,19 @@ close.on Events.Click,->
 					Utils.delay 0.03,->
 						ralbum.start()
 						ralbum_text.start()
+						rclose.start()
+						rtip.start()
 						Utils.delay 0.03,->
 							rshot.start()
 							Utils.delay 0.03,->
 								rword.start()
-								Utils.delay 1,->
-									rclose.start()
-									rtip.start()
-									Utils.delay 50,->
+								
+
+								Utils.delay 50,->
 
 	
 
-add.on Events.Click,->
-	atip.start()
-	aclose.start()
-	all()
-	jump()
-	Utils.delay 2,->
-		jump()	
-		Utils.delay 2,->
-			jump()	
-			Utils.delay 2,->
+
 				
 
 
