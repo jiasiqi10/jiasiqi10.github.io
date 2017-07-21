@@ -20,6 +20,7 @@ Screen.perspective = 0
 
 
 album = new Layer
+	superLayer: mainScreen
 	width: 120
 	height: 120
 	image: "images/album_01.png"
@@ -28,6 +29,7 @@ album = new Layer
 
 
 article = new Layer
+	superLayer: mainScreen
 	width: 120
 	height: 165
 	image: "images/article.png"
@@ -35,6 +37,7 @@ article = new Layer
 	y: 1800
 
 comment = new Layer
+	superLayer: mainScreen
 	width: 120
 	height: 165
 	image: "images/comment.png"
@@ -42,6 +45,7 @@ comment = new Layer
 	y: 1800
 
 live = new Layer
+	superLayer: mainScreen
 	width: 120
 	height: 165
 	image: "images/live.png"
@@ -50,6 +54,7 @@ live = new Layer
 
 
 show = new Layer
+	superLayer: mainScreen
 	width: 120
 	height: 165
 	image: "images/show.png"
@@ -57,6 +62,7 @@ show = new Layer
 	x: 50
 
 sign = new Layer
+	superLayer: mainScreen
 	width: 120
 	height: 165
 	image: "images/sign.png"
@@ -64,6 +70,7 @@ sign = new Layer
 	y: 1800
 
 word = new Layer
+	superLayer: mainScreen
 	width: 120
 	height: 165
 	image: "images/word.png"
@@ -71,6 +78,7 @@ word = new Layer
 	y: 1600
 
 shot = new Layer
+	superLayer: mainScreen
 	width: 120
 	height: 165
 	image: "images/shot.png"
@@ -97,6 +105,7 @@ bar= new Layer
 
 
 layerA = new Layer
+	superLayer: mainScreen
 	width: 95
 	height: 95
 	opacity: 0
@@ -297,10 +306,9 @@ rword = aword.reverse()
 
 
 
-layerA.onClick (event, layer) ->
 
 
-	Utils.delay 1,->
+Utils.delay 1,->
 		a1.start()
 		a5.start()
 		add.on "change:rotationY", ->
@@ -342,26 +350,10 @@ add.on Events.Click,->
 			Utils.delay 2,->
 				
 
-reverseall = ()->
-	aword.reverse
-	start()
-	Utils.delay 0.03,->
-		ashot.start()
-		Utils.delay 0.03,->
-			album.start()
-			Utils.delay 0.03,->
-				alive.start()
-				Utils.delay 0.03,->
-					ashow.start()
-					Utils.delay 0.03,->
-						article.start()
-						Utils.delay 0.03,->
-							asign.start()
-							Utils.delay 0.03,->
-								comment.start()
+	
+	
 
-add.on Events.Click,->
-	rword.start()
+
 
 
 
