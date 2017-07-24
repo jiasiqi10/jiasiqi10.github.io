@@ -329,7 +329,7 @@ Utils.delay 1,->
 					add.on "change:rotationY", ->
 						if add.rotationY <= 90
 							add.image = "images/add.png"
-
+							
 jump=()->
 	Utils.delay 1,->
 		a1album.start()
@@ -343,12 +343,13 @@ jump=()->
 						a5album.start()
 						Utils.delay 0.2,->
 							a6album.start()
-
+							
+a10=jump()
 add.on Events.Click,->
 	atip.start()
 	aclose.start()
 	all()
-	jump()
+	a10.start()
 	Utils.delay 2,->
 		jump()	
 		Utils.delay 2,->
@@ -374,9 +375,7 @@ close.on Events.Click,->
 							rshot.start()
 							Utils.delay 0.03,->
 								rword.start()
-								
-
-								Utils.delay 50,->
+								Utils.delay 150,->
 
 	
 
