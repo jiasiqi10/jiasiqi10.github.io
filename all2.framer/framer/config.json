@@ -1,11 +1,14 @@
 {
   "orientation" : 0,
   "updateDelay" : 0.3,
-  "cachedDeviceHeight" : 0,
+  "cachedDeviceHeight" : 1334,
   "contentScale" : 1,
   "fullScreen" : false,
-  "cachedDeviceWidth" : 0,
+  "cachedDeviceWidth" : 750,
   "sharedPrototype" : 0,
+  "propertyPanelToggleStates" : {
+
+  },
   "deviceType" : "apple-iphone-7-black",
   "projectId" : "F302B592-5BB0-489D-9F01-4B5F62590652",
   "deviceOrientation" : 0,

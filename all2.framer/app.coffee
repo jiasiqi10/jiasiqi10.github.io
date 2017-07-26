@@ -323,7 +323,7 @@ Utils.delay 1,->
 		add.on "change:rotationY", ->
 			if add.rotationY >= 90
 				add.image = "images/camera.png"
-	Utils.delay 3,->
+	Utils.delay 5,->
 					a6.start()
 					a2.start()
 					add.on "change:rotationY", ->
