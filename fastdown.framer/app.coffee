@@ -135,15 +135,3 @@ scroll.onClick (event,layer)->
 
 
 
-
-
-
-
-
-
-
-
-dialog2E = new Layer
-	width: 750
-	height: 354
-	image: "images/dialog2.png"
