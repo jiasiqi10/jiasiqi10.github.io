@@ -17,7 +17,7 @@ scroll.contentInset =
 	bottom: -480
 	
 Framer.Defaults.Animation =
-	time: 0.15
+	time: 0.2
 	curve: Bezier.easeInOut
 
 
