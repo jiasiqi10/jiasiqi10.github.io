@@ -73,19 +73,19 @@ layerA = new Layer
 	width: 750
 	height: 2334
 	y: 92
-	backgroundColor: "rgba(0,0,0,0.1)"
+	backgroundColor: "rgba(0,0,0,0.4)"
 	
 layerB = new Layer
 	opacity: 0
 	width: 750
 	height: 213
-	backgroundColor: "rgba(0,0,0,0.1)"
+	backgroundColor: "rgba(0,0,0,0.4)"
 	
 layerC = new Layer
 	opacity:0
 	width: 750
 	height: 89
-	backgroundColor: "rgba(0,0,0,0.1)"
+	backgroundColor: "rgba(0,0,0,0.4)"
 	y: 1245
 	
 layerA.placeBehind(dialog)
