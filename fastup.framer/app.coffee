@@ -12,8 +12,6 @@ scroll = new ScrollComponent
 	backgroundColor: "#E5E5E5"
 	scrollHorizontal: false
 # Add top and bottom inset
-
-
 scroll.contentInset =
 	top: 120
 	bottom: -480
@@ -21,7 +19,6 @@ scroll.contentInset =
 Framer.Defaults.Animation =
 	time: 0.2
 	curve: Bezier.easeInOut
-
 
 
 
@@ -34,6 +31,12 @@ body = new Layer
 
 
 
+head = new Layer
+	height: 1334
+	image: "images/head.png"
+	width: 750
+	parent: scroll
+	width: scroll.width 
 
 btn = new Layer
 	parent: scroll.content
@@ -47,22 +50,16 @@ btn = new Layer
 
 dialog = new Layer
 	height: 354
-	image: "images/dialog.png"
+	image: "images/dialog2.png"
 	width: 750
 	parent: scroll.content
-	y: 1015
-	opacity: 0
+	y: 664
 	scale: 0.2
+	opacity: 0
 	originX: 0.164
-	originY: 0
+	originY: 0.9
 dialog.placeBefore(scroll.body)
 
-head = new Layer
-	height: 1334
-	image: "images/head.png"
-	width: 750
-	parent: scroll
-	width: scroll.width 
 
 
 
@@ -133,6 +130,8 @@ scroll.onClick (event,layer)->
 	layerA.stateCycle("default")
 	layerB.stateCycle("default")
 	layerC.stateCycle("default")
+
+
 
 
 
