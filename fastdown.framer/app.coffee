@@ -50,14 +50,14 @@ btn = new Layer
 
 dialog = new Layer
 	height: 354
-	image: "images/dialog.png"
+	image: "images/dialog2.png"
 	width: 750
 	parent: scroll.content
-	y: 1015
-	opacity: 0
+	y: 664
 	scale: 0.2
-	originX: 0.2
-	originY: 0
+	opacity: 0
+	originX: 0.164
+	originY: 0.9
 dialog.placeBefore(scroll.body)
 
 
