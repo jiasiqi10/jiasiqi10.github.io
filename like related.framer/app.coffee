@@ -36,9 +36,11 @@ related.states.a =
 
 text_17.states.a =
 	opacity: 0
+	time:0
 
 text_18.states.a =
 	opacity: 1
+	time:0
 
 scroll.onScrollStart ->
 	btn.ignoreEvents = true
