@@ -1,8 +1,4 @@
-Framer.Defaults.Animation =
-	time: .2
-	curve: Bezier.easeInOut
 
-	
 # 	curve: Bezier.linear
 
 
@@ -21,27 +17,35 @@ bar.placeBefore(scroll)
 list1.parent = scroll.content
 list2.parent = scroll.content
 scroll.contentInset =
-	bottom: -300
+	bottom: 40
 
 # print list2.y
 layer = new Layer
 	backgroundColor: null
-	height: 2580
+	height: 2240
 
 list2.states.a =
 	y: 396 + 953
+	options:
+		time: 0.3
+		curve: Bezier.easeInOut
 	
 related.states.a =
 	y: 395
 	opacity: 1
+	options:
+		time: 0.3
+		curve: Bezier.easeInOut
 
 text_17.states.a =
 	opacity: 0
-	time:0.1
+	options:
+		time:0.1
 
 text_18.states.a =
 	opacity: 1
-	time:0.1
+	options:
+		time:0.1
 
 scroll.onScrollStart ->
 	btn.ignoreEvents = true
@@ -49,11 +53,12 @@ scroll.onScrollStart ->
 scroll.onScrollEnd ->
 	btn.ignoreEvents = false
 btn.onClick ->
-	Utils.delay 0.8, ->
-		list2.stateCycle("a")
+	Utils.delay 0.6, ->
+		related.stateCycle("a")
 		layer.parent = scroll.content
-		Utils.delay 0.1, ->
-			related.stateCycle("a")
+		Utils.delay 0, ->
+			list2.stateCycle("a")
+			
 
 btn.onClick ->
 	Like1.play()

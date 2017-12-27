@@ -764,7 +764,7 @@
         "brightness" : 100,
         "brightnessEnabled" : 0,
         "centerAnchorX" : 0.5,
-        "centerAnchorY" : 1.7098950524737631,
+        "centerAnchorY" : -0.13868065967016491,
         "children" : [
 
         ],
@@ -809,7 +809,7 @@
         "sepia" : 0,
         "sepiaEnabled" : 0,
         "targetName" : "related",
-        "top" : 666,
+        "top" : -570,
         "visible" : true,
         "width" : 375,
         "widthFactor" : null
