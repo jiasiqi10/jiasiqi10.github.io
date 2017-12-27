@@ -36,11 +36,11 @@ related.states.a =
 
 text_17.states.a =
 	opacity: 0
-	time:0
+	time:0.1
 
 text_18.states.a =
 	opacity: 1
-	time:0
+	time:0.1
 
 scroll.onScrollStart ->
 	btn.ignoreEvents = true
@@ -48,15 +48,17 @@ scroll.onScrollStart ->
 scroll.onScrollEnd ->
 	btn.ignoreEvents = false
 btn.onClick ->
-	list2.stateCycle("a")
-	text_17.stateCycle("a")
-	text_18.stateCycle("a")
-	layer.parent = scroll.content
-	Utils.delay 0.1, ->
-		related.stateCycle("a")
+	Utils.delay 1, ->
+		list2.stateCycle("a")
+		
+		layer.parent = scroll.content
+		Utils.delay 0.1, ->
+			related.stateCycle("a")
 
 btn.onClick ->
-	Like1.play()	
+	Like1.play()
+	text_17.stateCycle("a")
+	text_18.stateCycle("a")	
 BodymovinLayer1 = require 'Bodymovin1'
 BodymovinLayer2 = require 'Bodymovin2'
 BodymovinLayer3 = require 'Bodymovin3'
