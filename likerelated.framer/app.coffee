@@ -1,6 +1,7 @@
 Framer.Defaults.Animation =
 	time: .2
-	curve: Bezier.easeOut
+	curve: Bezier.easeInOut
+
 	
 # 	curve: Bezier.linear
 
@@ -48,7 +49,7 @@ scroll.onScrollStart ->
 scroll.onScrollEnd ->
 	btn.ignoreEvents = false
 btn.onClick ->
-	Utils.delay 0.6, ->
+	Utils.delay 0.5, ->
 		list2.stateCycle("a")
 		layer.parent = scroll.content
 		Utils.delay 0.2, ->
