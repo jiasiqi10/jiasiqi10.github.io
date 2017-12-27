@@ -4,6 +4,29 @@
     "children" : [
       {
         "__class" : "FrameNode",
+        "aspectRatioLocked" : false,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "blur" : 12,
+        "blurEnabled" : 0,
+        "blurType" : "layer",
+        "borderBottom" : 1,
+        "borderColor" : "#222",
+        "borderEnabled" : 0,
+        "borderLeft" : 1,
+        "borderPerSide" : false,
+        "borderRight" : 1,
+        "borderStyle" : "solid",
+        "borderTop" : 1,
+        "borderWidth" : 1,
+        "bottom" : null,
+        "boxShadows" : [
+
+        ],
+        "brightness" : 100,
+        "brightnessEnabled" : 0,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
         "children" : [
           {
             "__class" : "ImageNode",
@@ -180,7 +203,7 @@
             "centerAnchorY" : 0.32983508245877063,
             "children" : [
               {
-                "__class" : "RectangleNode",
+                "__class" : "FrameNode",
                 "aspectRatioLocked" : false,
                 "blendingEnabled" : 0,
                 "blendingMode" : "normal",
@@ -211,6 +234,8 @@
                 "constraintsLocked" : false,
                 "contrast" : 100,
                 "contrastEnabled" : 0,
+                "deviceType" : null,
+                "exportIncludesBackground" : true,
                 "exportOptions" : [
 
                 ],
@@ -241,6 +266,7 @@
                 "radius" : 0,
                 "radiusBottomLeft" : 0,
                 "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
                 "radiusPerCorner" : false,
                 "radiusTopLeft" : 0,
                 "radiusTopRight" : 0,
@@ -356,12 +382,10 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 15,
-                "widthFactor" : null,
-                "x" : 45,
-                "y" : 105
+                "widthFactor" : null
               },
               {
-                "__class" : "RectangleNode",
+                "__class" : "FrameNode",
                 "aspectRatioLocked" : false,
                 "blendingEnabled" : 0,
                 "blendingMode" : "normal",
@@ -392,6 +416,8 @@
                 "constraintsLocked" : false,
                 "contrast" : 100,
                 "contrastEnabled" : 0,
+                "deviceType" : null,
+                "exportIncludesBackground" : true,
                 "exportOptions" : [
 
                 ],
@@ -422,6 +448,7 @@
                 "radius" : 0,
                 "radiusBottomLeft" : 0,
                 "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
                 "radiusPerCorner" : false,
                 "radiusTopLeft" : 0,
                 "radiusTopRight" : 0,
@@ -466,7 +493,7 @@
                 "id" : "RW5}f&%@",
                 "invert" : 0,
                 "invertEnabled" : 0,
-                "left" : 313,
+                "left" : null,
                 "locked" : false,
                 "name" : "text_18",
                 "opacity" : 0,
@@ -534,12 +561,10 @@
                   }
                 },
                 "targetName" : "text_18",
-                "top" : 305,
+                "top" : null,
                 "visible" : true,
                 "width" : 16,
-                "widthFactor" : null,
-                "x" : 45,
-                "y" : 105
+                "widthFactor" : null
               }
             ],
             "clip" : false,
@@ -663,12 +688,17 @@
             "widthFactor" : null
           }
         ],
+        "clip" : true,
+        "constraintsLocked" : false,
+        "contrast" : 100,
+        "contrastEnabled" : 0,
         "deviceType" : "apple-iphone-8-space-gray",
         "exportIncludesBackground" : true,
         "exportOptions" : [
 
         ],
         "fillColor" : "rgba(238, 238, 238, 1.00)",
+        "fillEnabled" : true,
         "fillGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
@@ -677,14 +707,38 @@
           "start" : "black"
         },
         "fillType" : "color",
+        "grayscale" : 0,
+        "grayScaleEnabled" : 0,
         "height" : 667,
+        "heightFactor" : null,
+        "hueRotate" : 0,
+        "hueRotateEnabled" : 0,
         "id" : "eTY<P5#<",
+        "invert" : 0,
+        "invertEnabled" : 0,
+        "left" : 0,
+        "locked" : false,
         "name" : "art",
+        "opacity" : 1,
         "parentid" : "6d((d:E~",
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "saturate" : 100,
+        "saturateEnabled" : 0,
+        "sepia" : 0,
+        "sepiaEnabled" : 0,
         "targetName" : "art",
+        "top" : 0,
+        "visible" : true,
         "width" : 375,
-        "x" : 0,
-        "y" : 0
+        "widthFactor" : null
       },
       {
         "__class" : "ImageNode",
@@ -709,8 +763,8 @@
         ],
         "brightness" : 100,
         "brightnessEnabled" : 0,
-        "centerAnchorX" : 1.4866666666666666,
-        "centerAnchorY" : 1.3245877061469264,
+        "centerAnchorX" : 0.5,
+        "centerAnchorY" : 1.7098950524737631,
         "children" : [
 
         ],
@@ -736,10 +790,10 @@
         "intrinsicWidth" : 375,
         "invert" : 0,
         "invertEnabled" : 0,
-        "left" : 375,
+        "left" : 0,
         "locked" : false,
         "name" : "related",
-        "opacity" : 1,
+        "opacity" : 0,
         "originalFilename" : "related.png",
         "parentid" : "6d((d:E~",
         "radius" : 0,
@@ -755,7 +809,7 @@
         "sepia" : 0,
         "sepiaEnabled" : 0,
         "targetName" : "related",
-        "top" : 396,
+        "top" : 666,
         "visible" : true,
         "width" : 375,
         "widthFactor" : null
@@ -764,5 +818,5 @@
     "id" : "6d((d:E~",
     "parentid" : null
   },
-  "version" : 13
+  "version" : 19
 }

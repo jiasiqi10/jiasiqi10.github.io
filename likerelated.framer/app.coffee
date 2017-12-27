@@ -13,25 +13,25 @@ scroll.height = Screen.height
 
 
 scroll.scrollHorizontal = false
+related.parent = scroll.content
 scroll.parent = art
 title.placeBefore(scroll)
 bar.placeBefore(scroll)
 list1.parent = scroll.content
 list2.parent = scroll.content
-related.parent = scroll.content
 scroll.contentInset =
-	bottom: -32
+	bottom: -300
 
 # print list2.y
 layer = new Layer
 	backgroundColor: null
-	height: 2325
+	height: 2580
 
 list2.states.a =
-	y: 396 + 965
+	y: 396 + 953
 	
 related.states.a =
-	x: 0
+	y: 395
 	opacity: 1
 
 text_17.states.a =
