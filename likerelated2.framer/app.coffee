@@ -56,7 +56,7 @@ btn.onClick ->
 	Utils.delay 0.6, ->
 		list2.stateCycle("a")
 		layer.parent = scroll.content
-		Utils.delay 0.2, ->
+		Utils.delay 0, ->
 			related.stateCycle("a")
 			
 
