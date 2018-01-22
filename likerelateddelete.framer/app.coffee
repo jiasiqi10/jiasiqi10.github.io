@@ -45,7 +45,7 @@ scroll.onScrollStart ->
 scroll.onScrollEnd ->
 	btn.ignoreEvents = false
 btn.onClick ->
-	Utils.delay 0, ->
+	Utils.delay 0.1, ->
 		list2.stateCycle("a")
 		layer.parent = scroll.content
 		Utils.delay 0, ->
