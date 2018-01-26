@@ -29,13 +29,13 @@ layer = new Layer
 list2.states.a =
 	y: 396 + 170
 	options:
-		time: 0.15
+		time: 0.2
 		curve: Bezier.easeInOut
 	
 related.states.a =
 	opacity: 0
 	options:
-		time: 0.15
+		time: 0.2
 		curve: Bezier.easeInOut
 
 
@@ -45,7 +45,7 @@ scroll.onScrollStart ->
 scroll.onScrollEnd ->
 	btn.ignoreEvents = false
 btn.onClick ->
-	Utils.delay 0.1, ->
+	Utils.delay 0.15, ->
 		list2.stateCycle("a")
 		layer.parent = scroll.content
 		Utils.delay 0, ->
